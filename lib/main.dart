@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:math_quiz_app/screens/screen_game.dart';
 
 import './screens/screen_welcome.dart';
 
@@ -13,7 +14,9 @@ class MathQuizApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: WelcomeScreen.id,
       routes: {
-        WelcomeScreen.id : (context) => WelcomeScreen()
+        WelcomeScreen.id : (context) => WelcomeScreen(),
+        GameScreen.id : (context) => GameScreen(),
+
       },
       title: 'Math Quiz',
       theme: ThemeData(
