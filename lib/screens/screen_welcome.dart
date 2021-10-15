@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
@@ -11,23 +12,35 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Container(
+        width: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(''),
-            fit: BoxFit.cover,
+            image: AssetImage('assets/flutter icon.png',),
+            fit: BoxFit.contain,alignment: Alignment.center
           )
         ),
-        child: Column(children: [
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
           Container(
             child: AnimatedTextKit(
               animatedTexts: [
                 ColorizeAnimatedText('Quiz Game',
-                    textStyle: TextStyle(),
-                    colors:[Colors.red, Colors.deepPurple]
+                    textStyle: TextStyle(fontSize: 39, fontWeight: FontWeight.bold),
+                    colors:[Colors.red, Colors.deepPurple, Colors.cyanAccent, Colors.amber]
                 ),
               ],
+              repeatForever: true,
             ),
-          )
+          ),
+            Container(child: Text(
+              'Tap to Start',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 27,
+              ),
+            ),)
         ],),
       ),
     );
