@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:math_quiz_app/screens/screen_game.dart';
+import 'package:flutter/services.dart';
 
+import './screens/screen_game.dart';
 import './screens/screen_welcome.dart';
 
 void main() {
@@ -11,6 +12,7 @@ class MathQuizApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIOverlays([]);
     return MaterialApp(
       initialRoute: WelcomeScreen.id,
       routes: {
