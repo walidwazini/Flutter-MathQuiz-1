@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
+import 'package:math_quiz_app/constants.dart';
+
 class WelcomeScreen extends StatelessWidget {
   //const WelcomeScreen({Key? key}) : super(key: key);
   static final id = 'welcome_screen';
@@ -27,8 +29,9 @@ class WelcomeScreen extends StatelessWidget {
             child: AnimatedTextKit(
               animatedTexts: [
                 ColorizeAnimatedText('Quiz Game',
-                    textStyle: TextStyle(fontSize: 39, fontWeight: FontWeight.bold),
-                    colors:[Colors.red, Colors.deepPurple, Colors.cyanAccent, Colors.amber]
+                    textAlign: TextAlign.center,
+                    textStyle: kAnimationTextStyles,
+                    colors: kColorizeAnimationColors,
                 ),
               ],
               repeatForever: true,
