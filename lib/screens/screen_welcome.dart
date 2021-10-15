@@ -22,30 +22,33 @@ class WelcomeScreen extends StatelessWidget {
           )
         ),
         child: GestureDetector(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-            Container(
-              child: AnimatedTextKit(
-                animatedTexts: [
-                  ColorizeAnimatedText('Quiz Game',
-                      textAlign: TextAlign.center,
-                      textStyle: kAnimationTextStyles,
-                      colors: kColorizeAnimationColors,
-                  ),
-                ],
-                repeatForever: true,
-              ),
-            ),
-              Container(child: Text(
-                'Tap to Start',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 27,
+          behavior: HitTestBehavior.translucent,
+          child: AbsorbPointer(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+              Container(
+                child: AnimatedTextKit(
+                  animatedTexts: [
+                    ColorizeAnimatedText('Quiz Game',
+                        textAlign: TextAlign.center,
+                        textStyle: kAnimationTextStyles,
+                        colors: kColorizeAnimationColors,
+                    ),
+                  ],
+                  repeatForever: true,
                 ),
-              ),)
-          ],),
+              ),
+                Container(child: Text(
+                  'Tap to Start',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 27,
+                  ),
+                ),)
+            ],),
+          ),
           onTap: (){
             Navigator.pushNamed(context, GameScreen.id);
           },
