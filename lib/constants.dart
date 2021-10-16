@@ -12,3 +12,8 @@ const kAnimationTextStyles = TextStyle(
   fontWeight: FontWeight.bold,
   fontFamily: 'Be Vietnam Pro',
 );
+
+const kScoreLabelText = TextStyle(
+  fontSize: 28,
+  color: Colors.orangeAccent,
+);

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:math_quiz_app/constants.dart';
+
 class GameScreen extends StatefulWidget {
   //const GameScreen({Key? key}) : super(key: key);
   static final id = 'game_screen';
@@ -19,13 +21,36 @@ class _GameScreenState extends State<GameScreen> {
           )
         ),
         child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-          Text('HighScore',  style: TextStyle(fontSize: 30, color: Colors.yellowAccent),),
-          SizedBox(height: 20,),
-          Text('0', style: TextStyle(fontSize: 30, color: Colors.black),)
-        ],),
+            Row(
+              children: [
+                ScoreIndicator(label: 'HighScore',score: '0',),
+                Spacer(),
+                ScoreIndicator(label: 'Score',score: '0',),
+              ],
+            ),
+          ],
+        ),
       ),
     );
+  }
+}
+
+class ScoreIndicator extends StatelessWidget {
+
+  final label;
+  final score;
+
+  ScoreIndicator({this.label, this.score});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+    crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+      Text(label,  style: kScoreLabelText,),
+      SizedBox(height: 20,),
+      Text(score, style: TextStyle(fontSize: 40, color: Colors.black, fontFamily: 'Press Start 2P',fontWeight: FontWeight.bold),)
+    ],);
   }
 }

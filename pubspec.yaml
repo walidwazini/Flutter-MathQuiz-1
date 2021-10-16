@@ -56,12 +56,12 @@ flutter:
          - asset: assets/fonts/BeVietnamPro-Light.ttf
          - asset: assets/fonts/BeVietnamPro-Bold.ttf
            weight: 700
-     - family: Press Start 2P
-       fonts:
-        - asset: assets/fonts/PressStart2P.ttf
-     - family: Chakra Petch
-       fonts:
-        - asset: assets/fonts/ChakraPetch-Regular.ttf
+#     - family: Press Start 2P
+#       fonts:
+#         - asset: assets/fonts/PressStart2P.ttf
+#     - family: Chakra Petch
+#       fonts:
+#         - asset: assets/fonts/ChakraPetch-Regular.ttf
 
 
   # see https://flutter.dev/custom-fonts/#from-packages
